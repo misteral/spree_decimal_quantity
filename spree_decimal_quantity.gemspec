@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_decimal_quantity'
   s.version     = '2.3.5'
   s.summary     = 'Add to spree decimal amount'
-  s.description = 'Add to spree decimal amoun'
+  s.description = 'Add to spree decimal amount'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'AL Bobrov'
