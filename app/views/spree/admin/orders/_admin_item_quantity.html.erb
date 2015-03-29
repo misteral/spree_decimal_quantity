@@ -1,0 +1,5 @@
+<td class="item-qty-show align-center">
+    <% item.states.each do |state,count| %>
+      <%= item.quantity %> x <%= Spree.t(state).downcase %>
+    <% end %>
+</td>
