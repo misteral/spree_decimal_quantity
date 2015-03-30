@@ -14,7 +14,7 @@ Spree::Shipment.class_eval do
         line_item = units.first.line_item
         variant = units.first.variant
         # binding.pry
-        Spree::ManifestItem.new(line_item, variant, units.first.line_item.quantity.to_f, states)
+        Spree::Shipment::ManifestItem.new(line_item, variant, units.first.line_item.quantity.to_f, states)
       end
     end.flatten
   end
