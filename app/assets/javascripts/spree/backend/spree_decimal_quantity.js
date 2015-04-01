@@ -6,3 +6,8 @@ $(document).ready(function(){
     $( this ).next().val( value*10 )
   })
 })
+
+  function updateNextInputQuantity(r_this) {
+    var value = $( r_this ).val()
+    $( r_this ).next().val( value*10 )
+  }
