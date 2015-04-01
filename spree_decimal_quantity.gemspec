@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_decimal_quantity'
-  s.version     = '2.3.10'
+  s.version     = '2.3.11'
   s.summary     = 'Add to spree decimal amount'
   s.description = 'Add to spree decimal amount'
   s.required_ruby_version = '>= 1.9.3'
