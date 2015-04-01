@@ -5,12 +5,12 @@ Spree::Price.class_eval do
 
     def price
       return amount unless variant.product.dcm
-      amount*10.to_f
+      amount.to_f*10
     end
 
     def price=(price)
       return self[:amount] = parse_price(price) unless variant.product.dcm
-      self[:amount] = parse_price(price/10)
+      self[:amount] = parse_price(price.to_f/10)
     end
 
     def parse_price(price)
