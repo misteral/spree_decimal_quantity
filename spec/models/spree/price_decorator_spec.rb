@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Spree::Variant do
+describe Spree::Product do
   describe "price with decimal products" do
     it "update price with decimal functions" do
       price = 8.00

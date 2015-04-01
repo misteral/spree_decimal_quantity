@@ -1,5 +1,5 @@
 <td class="item-qty-show align-center">
     <% item.states.each do |state,count| %>
-      <%= item.quantity %> x <%= Spree.t(state).downcase %>
+      <%= item.line_item.quantity_dcm %> x <%= Spree.t(state).downcase %>
     <% end %>
 </td>

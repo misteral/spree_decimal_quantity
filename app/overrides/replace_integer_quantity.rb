@@ -8,11 +8,17 @@ Deface::Override.new(:virtual_path => "spree/orders/_line_item",
                      :replace => '[data-hook="cart_item_quantity"]',
                      :partial => "/spree/orders/line_item_quantity",
                      :disabled => false)
-# Deface::Override.new(:virtual_path => "spree/admin/orders/_shipment_manifest",
-#                      :name => "replace_admin_item_quantity",
-#                      :replace => '[class="item-qty-show align-center"]',
-#                      :partial => "/spree/admin/orders/admin_item_quantity",
-#                      :disabled => false)
+Deface::Override.new(:virtual_path => "spree/shared/_order_details",
+                     :name => "replace_item_quantity_on_order_details",
+                     :replace => '[data-hook="order_item_qty"]',
+                     :text => '<td data-hook="order_item_qty" align="right">Laufmeter/Stk: <%= item.quantity_dcm %></td>',
+                     :disabled => false)
+
+Deface::Override.new(:virtual_path => "spree/admin/orders/_shipment_manifest",
+                     :name => "replace_admin_item_quantity",
+                     :replace => '[class="item-qty-show align-center"]',
+                     :partial => "/spree/admin/orders/admin_item_quantity",
+                     :disabled => false)
 Deface::Override.new(:virtual_path => "spree/admin/orders/_shipment_manifest",
                      :name => "replace_admin_edit_quantity",
                      :replace => '[class="item-qty-edit hidden"]',
