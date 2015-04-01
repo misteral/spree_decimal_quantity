@@ -16,6 +16,7 @@ Spree::LineItem.class_eval do
       self.currency = variant.currency if currency.nil?
     end
   end
+  alias single_display_amount single_money
 end
 
 
