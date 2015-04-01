@@ -5,8 +5,8 @@ module SpreeDecimalQuantity
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_javascripts
-        # append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_decimal_quantity\n"
-        # append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/spree_decimal_quantity\n"
+        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_decimal_quantity\n"
+        append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/spree_decimal_quantity\n"
       end
 
       def add_stylesheets
