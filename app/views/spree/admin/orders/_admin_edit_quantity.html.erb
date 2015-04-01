@@ -1,3 +1,4 @@
 <td class="item-qty-edit hidden">
-  <%= number_field_tag :quantity, item.quantity, :min => 0, :class => "line_item_quantity", :size => 5, :step => 0.1 %>
+  <%= number_field_tag :quantity_dcm, item.line_item.quantity_dcm, :min => 0, :class => "line_item_quantity_dcm", :size => 5, :step => 0.1 %>
+  <%= number_field_tag :quantity, item.quantity, :min => 0, :class => "line_item_quantity", :size => 5 %>
 </td>
