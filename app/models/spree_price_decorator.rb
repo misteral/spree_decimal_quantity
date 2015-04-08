@@ -4,11 +4,13 @@ Spree::Price.class_eval do
     end
 
     def price
+      return amount.to_f*10 if variant.nil? # added for product creation
       return amount unless variant.product.dcm
       amount.to_f*10
     end
 
     def price=(price)
+      return self[:amount] = parse_price(price.to_f/10) if variant.nil? # added for product creation
       return self[:amount] = parse_price(price) unless variant.product.dcm
       self[:amount] = parse_price(price.to_f/10)
     end
