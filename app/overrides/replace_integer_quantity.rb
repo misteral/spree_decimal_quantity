@@ -24,3 +24,14 @@ Deface::Override.new(:virtual_path => "spree/admin/orders/_shipment_manifest",
                      :replace => '[class="item-qty-edit hidden"]',
                      :partial => "/spree/admin/orders/admin_edit_quantity",
                      :disabled => false)
+
+Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
+                     :name => "replace_admin_edit_variant_price",
+                     :replace => '[data-hook="price"]',
+                     :partial => "/spree/admin/variants/replace_admin_edit_variant_price",
+                     :disabled => false)
+# Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
+#                      :name => "replace_admin_edit_variant_cost_price",
+#                      :replace => '[data-hook="cost_price"]',
+#                      :partial => "/spree/admin/variants/replace_admin_edit_variant_cost_price",
+#                      :disabled => false)

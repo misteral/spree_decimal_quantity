@@ -1,0 +1,4 @@
+<div class="field" data-hook="price">
+  <%= f.label :price, Spree.t(:price) %>
+  <%= f.number_field :price, value: number_with_precision(@variant.price, precision: 2, separator: '.'), class: 'fullwidth', step:'0.01' %>
+</div>
