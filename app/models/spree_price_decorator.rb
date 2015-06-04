@@ -10,6 +10,7 @@ Spree::Price.class_eval do
     end
 
     def price=(price)
+      price = price.to_s.tr(',', '.').to_f
       return self[:amount] = parse_price(price.to_f/10) if variant.nil? # added for product creation
       return self[:amount] = parse_price(price) unless variant.product.dcm
       self[:amount] = parse_price(price.to_f/10)
